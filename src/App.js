@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './Component/Home.js';
 
 function App() {
   return (
     <>
-    <h1 className='text-red-700'>hello</h1>
+    <Home/>
     </>
   );
 }
