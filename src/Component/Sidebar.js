@@ -6,7 +6,8 @@ function Sidebar() {
 
 	const menuItems = [
 		{ name: 'About', link: '#about' },
-		{ name: 'Projects', link: '#projects' },
+		{ name: 'Projects', link: '#project' },
+		{ name: 'Experience', link: '#experience' },
 		{ name: 'Contact', link: '#contact' },
 	];
 
@@ -14,13 +15,13 @@ function Sidebar() {
 		<>
 			{/* DESKTOP */}
 			<nav className="hidden md:flex w-full bg-yellow-500 items-center py-6 px-20 gap-10 text-lg font-medium">
-				<span className="font-bold text-xl">Logo</span>
-				<div className="flex gap-10 ml-auto">
+				<span className="font-bold text-xl bg-yellow-500">Logo</span>
+				<div className="flex gap-10 ml-auto bg-yellow-500">
 					{menuItems.map((item) => (
 						<a
 							key={item.name}
 							href={item.link}
-							className="hover:text-black/70">
+							className="hover:text-black/70 bg-yellow-500">
 							{item.name}
 						</a>
 					))}
@@ -59,13 +60,15 @@ function Sidebar() {
 				</div>
 
 				{/* MENU ITEMS FOR MOBILE */}
-				<ul className="flex flex-col gap-6 p-4 text-lg">
+				<ul className="flex flex-col gap-6 p-4 text-lg ">
 					{menuItems.map((item) => (
-						<li key={item.name}>
+						<li
+							key={item.name}
+							className="hover:bg-yellow-500 hover:rounded max-w-full">
 							<a
 								href={item.link}
 								onClick={() => setOpen(false)}
-								className="hover:text-yellow-600">
+								className="">
 								{item.name}
 							</a>
 						</li>
