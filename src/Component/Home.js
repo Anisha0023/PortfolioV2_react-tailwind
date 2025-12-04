@@ -4,6 +4,7 @@ import { RiTodoLine } from 'react-icons/ri';
 import About from './About';
 import Projects from './Projects';
 import Experience from './Experience';
+import Contact from './Contact';
 
 function Home() {
   return (
@@ -65,6 +66,11 @@ function Home() {
 				id="experience"
 				className="mt-5 w-full">
 				<Experience />
+			</div>
+			<div
+				id="contact"
+				className="mt-5 w-full">
+				<Contact />
 			</div>
 		</>
 	);
