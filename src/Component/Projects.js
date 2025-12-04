@@ -18,7 +18,7 @@ export default function Projects() {
 	];
 
 	return (
-		<div className="w-full py-16 flex flex-col items-center">
+		<div className="w-full py-5 flex flex-col items-center">
 			<h1 className="font-serif font-bold text-4xl">Projects</h1>
 
 			<div className="flex flex-col gap-16 mt-12 w-11/12 max-w-4xl">

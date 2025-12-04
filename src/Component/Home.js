@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa6';
 import { RiTodoLine } from 'react-icons/ri';
 import About from './About';
 import Projects from './Projects';
+import Experience from './Experience';
 
 function Home() {
   return (
@@ -52,13 +53,18 @@ function Home() {
 
 			<div
 				id="about"
-				className="mt-28 w-full">
+				className="mt-5 w-full">
 				<About />
 			</div>
 			<div
 				id="project"
-				className="mt-28 w-full">
+				className="mt-5 w-full">
 				<Projects />
+			</div>
+			<div
+				id="experience"
+				className="mt-5 w-full">
+				<Experience />
 			</div>
 		</>
 	);
