@@ -7,7 +7,7 @@ function Sidebar() {
 	const menuItems = [
 		{ name: 'About', link: '#about' },
 		{ name: 'Projects', link: '#project' },
-		{ name: 'Experience', link: '#experience' },
+		{ name: 'Skills & Experience', link: '#experience' },
 		{ name: 'Contact', link: '#contact' },
 	];
 
