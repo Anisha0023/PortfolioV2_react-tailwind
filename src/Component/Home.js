@@ -5,7 +5,8 @@ import About from './About';
 import Projects from './Projects';
 import Experience from './Experience';
 import Contact from './Contact';
-
+import { Player } from '@lottiefiles/react-lottie-player';
+import homeAnimation from '../assets/lottieAnimationImg/uiux designer.json';
 function Home() {
   return (
 		<>
@@ -45,9 +46,13 @@ function Home() {
 					</div>
 				</div>
 
-				{/* RIGHT CONTENT (Empty for now, you can add anything later) */}
 				<div className="w-full lg:w-1/3 flex justify-center lg:justify-end">
-					{/* Add any features later like icons, images, stats, etc */}
+				  <Player
+					  autoplay
+					  loop
+					  src={homeAnimation}
+					  style={{}}
+				  />
 					<div className="text-gray-400 text-sm">{/* Placeholder */}</div>
 				</div>
 			</div>
