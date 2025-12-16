@@ -4,15 +4,15 @@ import userImage from '../assets/images/anisha.jpg'
 export default function About() {
     return (
 			<div
-				className="min-h-screen p-8 flex items-center">
-				<div className="w-full flex flex-col lg:flex-row items-center lg:items-start mt-10 relative justify-around px-4 lg:px-20 gap-10">
+				className="p-8 flex items-center">
+				<div className="w-full flex flex-col lg:flex-row items-center lg:items-start relative justify-around px-4 lg:px-20 gap-10">
 					<div className="flex flex-col max-w-xl gap-5 mt-5">
 						<h1 className="font-bold text-4xl font-serif tracking-wider">
 							About Me
 						</h1>
 
 						<p className="text-gray-600 font-inter text-lg leading-relaxed max-w-xl">
-							Hello! I’m Anisha JK — a Full Stack Developer who loves turning
+							Hello! I’m Anisha J K, a Full Stack Developer who loves turning
 							ideas into clean, responsive, and engaging digital experiences.
 						</p>
 						<p className="text-gray-600 font-inter text-lg leading-relaxed max-w-xl">

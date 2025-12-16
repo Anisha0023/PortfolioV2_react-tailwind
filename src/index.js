@@ -4,10 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Particles from './UI/Particles';
+import { ThemeProvider } from './Context/ThemeContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
+		<ThemeProvider>
+
 		<Particles
 			particleColors={['#ffffff', '#ffffff']}
 			particleCount={200}
@@ -19,6 +22,7 @@ root.render(
 			disableRotation={false}>
 			<App />
 		</Particles>
+				</ThemeProvider>
 	</React.StrictMode>
 );
 

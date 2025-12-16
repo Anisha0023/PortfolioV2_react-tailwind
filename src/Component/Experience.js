@@ -197,23 +197,19 @@ const Experience = () => {
 	]);
 
 	return (
-		<div className="w-full min-h-screen px-4 sm:px-8 lg:px-16 py-20">
+		<div className="w-full px-4 sm:px-8 lg:px-16 py-20">
 			<div className="max-w-7xl mx-auto">
-				{/* Section Title */}
 				<h1 className="font-bold text-4xl font-serif tracking-wider mb-12 text-center">
 					Skills & Experience
 				</h1>
 
-				{/* Main Content Grid */}
 				<div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
-					{/* Left Side - Skills Panel */}
 					<div className="lg:col-span-1 order-2 lg:order-1">
 						<div className="sticky top-20">
 							<Skill />
 						</div>
 					</div>
 
-					{/* Right Side - Experience Timeline */}
 					<div className="lg:col-span-2 order-1 lg:order-2">
 						<div className="space-y-6">
 							{experiences.map((exp, index) => (
