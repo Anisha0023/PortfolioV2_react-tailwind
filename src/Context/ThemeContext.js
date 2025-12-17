@@ -15,10 +15,10 @@ export const ThemeProvider = ({children}) => {
     useEffect(() => {
 			const prefersDark = window.matchMedia(
 				'(prefers-color-scheme: dark)'
-			).matches;
+        ).matches;
 			if (!localStorage.getItem('theme')) {
 				setTheme(prefersDark ? 'dark' : 'light');
-			}
+        }
 	}, []);
 
 

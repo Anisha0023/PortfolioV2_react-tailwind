@@ -20,7 +20,7 @@ function Home() {
 						Hello, My Name is <br /> Anisha J K
 					</h1>
 
-					<p className="text-gray-600 font-inter text-lg leading-relaxed">
+					<p className="text-gray-600 dark:text-white font-inter text-lg leading-relaxed">
 						Hello, Thank you for visiting my profile. My name is Anisha. I am a
 						full stack developer who has been working in these technologies,
 						providing service for clients, and currently working as a .NET full

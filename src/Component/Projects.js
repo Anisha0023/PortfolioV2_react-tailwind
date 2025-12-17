@@ -29,16 +29,18 @@ export default function Projects() {
 							${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}
 						`}>
 						{/* LEFT/RIGHT CONTENT */}
-						<div className="md:w-1/2 flex flex-col justify-center bg-white">
-							<h2 className="text-4xl font-serif font-semibold mb-4 bg-white">
+						<div className="md:w-1/2 flex flex-col justify-center bg-white ">
+							<h2 className="text-4xl font-serif font-semibold mb-4 bg-white dark:text-black">
 								{project.title}
 							</h2>
 
-							<p className="mb-6 leading-relaxed bg-white">{project.desc}</p>
+							<p className="mb-6 leading-relaxed bg-white dark:text-black">
+								{project.desc}
+							</p>
 
 							<a
 								href={project.link}
-								className="border border-gray-700 max-w-50 bg-white px-6 py-2 rounded-full hover:bg-yellow-500 transition">
+								className="border border-gray-700 dark:bg-yellow-500 dark:text-black max-w-50 bg-white px-6 py-2 rounded-full hover:bg-yellow-500 transition">
 								View Project
 							</a>
 						</div>
