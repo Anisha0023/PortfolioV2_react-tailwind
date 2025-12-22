@@ -21,7 +21,7 @@ function Sidebar() {
 				bg-yellow-500
 				text-black dark:text-gray-100
 				font-medium transition-colors">
-				<span className="font-bold text-xl">Logo</span>
+				<span className="font-bold text-xl"></span>
 
 				<div className="flex gap-10 ml-auto items-center">
 					{menuItems.map((item) => (
@@ -45,7 +45,7 @@ function Sidebar() {
 				className="flex md:hidden w-full justify-between items-center py-4 px-6
 				bg-yellow-500
 				text-black dark:text-gray-100 transition-colors">
-				<span className="font-bold text-xl">Logo</span>
+				<span className="font-bold text-xl"></span>
 
 				<div className="flex items-center gap-4">
 					<button

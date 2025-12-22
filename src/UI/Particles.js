@@ -8,20 +8,25 @@ import {
 	Mesh,
 	Color,
 } from 'ogl';
+import { useTheme } from '../Context/ThemeContext';
 
 const Particles = ({
-	particleColors = ['#ffffff', '#ffffff'],
-	particleCount = 200,
+	particleColorsLight = ['#ffffff', '#ffffff'],
+	particleColorsDark = ['#fff220', '#a78bfa'],
+	particleCount = 100,
 	particleSpread = 10,
 	speed = 0.1,
-	particleBaseSize = 100,
+	particleBaseSize = 10,
+	sizeRandomness = 1,
 	moveParticlesOnHover = true,
-	alphaParticles = false,
+	alphaParticles = true,
 	disableRotation = false,
 	children,
+	cameraDistance = 20,
 }) => {
 	const canvasRef = useRef();
 	const mouseRef = useRef({ x: 0, y: 0 });
+	const { theme } = useTheme();
 
 	useEffect(() => {
 		const canvas = canvasRef.current;
@@ -70,12 +75,13 @@ const Particles = ({
     `;
 
 		// Create particles
-		const particles = [];
+		const particleColors =
+			theme === 'dark' ? particleColorsDark : particleColorsLight;
 		const colors = particleColors.map((color) => {
 			const c = new Color(color);
 			return [c.r, c.g, c.b];
 		});
-
+		const particles = [];
 		for (let i = 0; i < particleCount; i++) {
 			const colorIndex = Math.floor(Math.random() * colors.length);
 			particles.push({
@@ -159,7 +165,9 @@ const Particles = ({
 			window.removeEventListener('mousemove', handleMouseMove);
 		};
 	}, [
-		particleColors,
+		theme,
+		particleColorsLight,
+		particleColorsDark,
 		particleCount,
 		particleSpread,
 		speed,
@@ -167,6 +175,8 @@ const Particles = ({
 		moveParticlesOnHover,
 		alphaParticles,
 		disableRotation,
+		sizeRandomness,
+		cameraDistance,
 	]);
 
 	return (

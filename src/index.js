@@ -14,7 +14,7 @@ root.render(
 		<Particles
 			particleColors={['#ffffff', '#ffffff']}
 			particleCount={200}
-			particleSpread={10}
+			particleSpread={25}
 			speed={0.1}
 			particleBaseSize={100}
 			moveParticlesOnHover={true}
