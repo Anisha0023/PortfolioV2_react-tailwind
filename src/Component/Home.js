@@ -1,4 +1,3 @@
-import Sidebar from './Sidebar';
 import { FaGithub, FaLinkedin } from 'react-icons/fa6';
 import { RiTodoLine } from 'react-icons/ri';
 import About from './About';
@@ -8,23 +7,23 @@ import Contact from './Contact';
 import { Player } from '@lottiefiles/react-lottie-player';
 import homeAnimation from '../assets/lottieAnimationImg/uiux designer.json';
 function Home() {
-  return (
+	return (
 		<>
-			<div className="w-full flex flex-col lg:flex-row items-start justify-between px-8 mt-20 gap-10">
+			<div
+				data-aos="fade-up"
+				className="w-full flex flex-col lg:flex-row items-start justify-between px-8 mt-20 gap-10">
 				<div className="max-w-xl flex flex-col gap-5">
 					<h3 className="text-yellow-500 text-xl font-semibold tracking-wider">
 						FULL STACK DEVELOPER
 					</h3>
 
 					<h1 className="font-serif text-4xl font-bold leading-tight">
-						Hello, My Name is <br /> Anisha J K
+						Hello, I'm Anisha J K
 					</h1>
 
 					<p className="text-gray-600 dark:text-white font-inter text-lg leading-relaxed">
-						Hello, Thank you for visiting my profile. My name is Anisha. I am a
-						full stack developer who has been working in these technologies,
-						providing service for clients, and currently working as a .NET full
-						stack developer.
+						Specialized in building modern React frontends backed by robust .NET
+						APIs, delivering clean architecture and intuitive user experiences.
 					</p>
 
 					<div className="flex flex-wrap gap-4 mt-5">
@@ -47,32 +46,36 @@ function Home() {
 				</div>
 
 				<div className="w-full lg:w-1/3 flex justify-center lg:justify-end">
-				  <Player
-					  autoplay
-					  loop
-					  src={homeAnimation}
-					  style={{}}
-				  />
+					<Player
+						autoplay
+						loop
+						src={homeAnimation}
+						style={{}}
+					/>
 					<div className="text-gray-400 text-sm">{/* Placeholder */}</div>
 				</div>
 			</div>
 
 			<div
+				data-aos="fade-right"
 				id="about"
 				className="mt-5 w-full">
 				<About />
 			</div>
 			<div
+				data-aos="fade-up"
 				id="project"
 				className="mt-5 w-full">
 				<Projects />
 			</div>
 			<div
+				data-aos="fade-right"
 				id="experience"
 				className="mt-5 w-full">
 				<Experience />
 			</div>
 			<div
+				data-aos="fade"
 				id="contact"
 				className="mt-5 w-full">
 				<Contact />
@@ -82,5 +85,3 @@ function Home() {
 }
 
 export default Home;
-
-
