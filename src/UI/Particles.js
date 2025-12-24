@@ -11,7 +11,7 @@ import {
 import { useTheme } from '../Context/ThemeContext';
 
 const Particles = ({
-	particleColorsLight = ['#ffffff', '#ffffff'],
+	particleColorsLight = ['#ffffff', '#fff220'],
 	particleColorsDark = ['#fff220', '#a78bfa'],
 	particleCount = 100,
 	particleSpread = 10,
