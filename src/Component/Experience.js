@@ -149,7 +149,7 @@ import gtc from '../assets/images/gtc.png';
 import Skill from './Skill';
 
 const Experience = () => {
-	const [experiences, setExperiences] = useState([
+	const [experiences] = useState([
 		{
 			id: 1,
 			company: 'GreenTop Information Technology',

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import contactAnimation from '../assets/lottieAnimationImg/Contact Us.json';
 import { Player } from '@lottiefiles/react-lottie-player';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
 	const [formData, setFormData] = useState({
@@ -19,7 +20,27 @@ function Contact() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		setFormData({ name: '', email: '', subject: '', message: '' });
+
+		emailjs
+			.send(
+				'service_d79sxgg',
+				'template_0brfwwj',
+				{
+					name: formData.name,
+					email: formData.email,
+					subject: formData.subject,
+					message: formData.message,
+				},
+				'rdSU7gD0f6w2fLFt0'
+			)
+			.then(() => {
+				alert('Message sent successfully!');
+				setFormData({ name: '', email: '', subject: '', message: '' });
+			})
+			.catch((error) => {
+				console.error('EmailJS Error:', error);
+				alert('Failed to send message');
+			});
 	};
 
 	return (
@@ -105,7 +126,6 @@ function Contact() {
 								/>
 							</div>
 
-							
 							<button
 								type="submit"
 								className="w-full bg-yellow-500 text-black py-3 rounded-md font-medium hover:bg-yellow-400 transition">
