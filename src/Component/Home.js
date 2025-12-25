@@ -27,19 +27,23 @@ function Home() {
 					</p>
 
 					<div className="flex flex-wrap gap-4 mt-5">
-						<a className="btn-default flex items-center gap-2 justify-center">
+						<a
+							className="btn-default flex items-center gap-2 justify-center"
+							target="blank">
 							Projects <RiTodoLine />
 						</a>
 
 						<a
 							href="https://www.linkedin.com/in/anisha-j-k-profile"
-							className="btn-default flex items-center gap-2 justify-center">
+							className="btn-default flex items-center gap-2 justify-center"
+							target="blank">
 							LinkedIn <FaLinkedin />
 						</a>
 
 						<a
 							href="https://github.com/Anisha0023"
-							className="btn-default flex items-center gap-2 justify-center">
+							className="btn-default flex items-center gap-2 justify-center"
+							target="blank">
 							GitHub <FaGithub />
 						</a>
 					</div>

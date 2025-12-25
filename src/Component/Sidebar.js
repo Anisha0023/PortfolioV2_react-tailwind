@@ -89,7 +89,7 @@ function Sidebar() {
 								href={item.link}
 								onClick={() => setOpen(false)}
 								className="block px-4 py-2 rounded
-								hover:bg-yellow-500 dark:hover:bg-gray-800 transition">
+								hover:bg-yellow-500 dark:hover:bg-yellow-500 transition">
 								{item.name}
 							</a>
 						</li>
@@ -101,5 +101,3 @@ function Sidebar() {
 }
 
 export default Sidebar;
-
-
