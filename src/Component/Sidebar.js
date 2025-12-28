@@ -16,11 +16,12 @@ function Sidebar() {
 
 	return (
 		<>
+			{/* DeskTop View */}
 			<nav
 				className="hidden md:flex w-full items-center py-5 px-20 gap-10
-				bg-yellow-500
+				bg-yellow-500/70
 				text-black dark:text-gray-100
-				font-medium transition-colors">
+				font-medium transition-colors sticky top-0 z-50 backdrop-filter backdrop-blur-[20px]">
 				<span className="font-bold text-xl"></span>
 
 				<div className="flex gap-10 ml-auto items-center">
@@ -40,11 +41,11 @@ function Sidebar() {
 					</button>
 				</div>
 			</nav>
-
+			{/* Mbl View */}
 			<div
 				className="flex md:hidden w-full justify-between items-center py-4 px-6
-				bg-yellow-500
-				text-black dark:text-gray-100 transition-colors">
+				bg-yellow-500/70
+				text-black dark:text-gray-100 transition-colors sticky top-0 z-50">
 				<span className="font-bold text-xl"></span>
 
 				<div className="flex items-center gap-4">
@@ -70,9 +71,8 @@ function Sidebar() {
 
 			<div
 				className={`fixed top-0 left-0 w-64 h-full z-50 transform transition-transform duration-300
-				bg-white dark:bg-gray-900
 				text-gray-900 dark:text-gray-100
-				shadow-lg
+				shadow-lg backdrop-filter backdrop-blur-[20px]
 				${open ? 'translate-x-0' : '-translate-x-full'}`}>
 				<div className="p-4 flex justify-end">
 					<FiX

@@ -4,7 +4,7 @@
 
 .btn-default {
   @apply border border-black w-full rounded-lg max-w-[100px] h-10 pt-1 
-         hover:bg-yellow-500 hover:border-none 
+         hover:bg-yellow-500/80 hover:border-none 
          flex items-center justify-center;
          
 }

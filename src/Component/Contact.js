@@ -2,6 +2,8 @@ import { useState } from 'react';
 import contactAnimation from '../assets/lottieAnimationImg/Contact Us.json';
 import { Player } from '@lottiefiles/react-lottie-player';
 import emailjs from '@emailjs/browser';
+import ConfirmationModal from './ConfirmationModal';
+import { FaExclamation, FaCheckCircle } from 'react-icons/fa';
 
 function Contact() {
 	const [formData, setFormData] = useState({
@@ -10,6 +12,10 @@ function Contact() {
 		subject: '',
 		message: '',
 	});
+
+	const [showModal, setShowModal] = useState(false);
+	const [modalMessage, setModalMessage] = useState('');
+	const [isSuccess, setIsSuccess] = useState(false);
 
 	const handleChange = (e) => {
 		setFormData({
@@ -34,12 +40,20 @@ function Contact() {
 				'rdSU7gD0f6w2fLFt0'
 			)
 			.then(() => {
-				alert('Message sent successfully!');
+				setIsSuccess(true);
+				setModalMessage(
+					'Message sent successfully! We will get back to you soon.'
+				);
+				setShowModal(true);
+
 				setFormData({ name: '', email: '', subject: '', message: '' });
 			})
 			.catch((error) => {
 				console.error('EmailJS Error:', error);
-				alert('Failed to send message');
+
+				setIsSuccess(false);
+				setModalMessage('Failed to send message. Please try again later.');
+				setShowModal(true);
 			});
 	};
 
@@ -106,7 +120,7 @@ function Contact() {
 									value={formData.subject}
 									onChange={handleChange}
 									placeholder="Project Inquiry"
-									className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-yellow-500"
+									className="w-full px-4 py-2 border border-ring-yellow-500 rounded-md focus:ring-2 focus:ring-yellow-500"
 									required
 								/>
 							</div>
@@ -135,6 +149,21 @@ function Contact() {
 					</div>
 				</div>
 			</div>
+
+			{showModal && (
+				<ConfirmationModal
+					message={modalMessage}
+					success={isSuccess}
+					logo={
+						isSuccess ? (
+							<FaCheckCircle className="text-green-500" />
+						) : (
+							<FaExclamation className="text-red-500" />
+						)
+					}
+					onClose={() => setShowModal(false)}
+				/>
+			)}
 		</section>
 	);
 }
