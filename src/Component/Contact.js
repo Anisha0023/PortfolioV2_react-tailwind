@@ -16,6 +16,7 @@ function Contact() {
 	const [showModal, setShowModal] = useState(false);
 	const [modalMessage, setModalMessage] = useState('');
 	const [isSuccess, setIsSuccess] = useState(false);
+	const [buttonLoading, setButtonLoading] = useState(false);
 
 	const handleChange = (e) => {
 		setFormData({
@@ -26,7 +27,7 @@ function Contact() {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-
+		setButtonLoading(true);
 		emailjs
 			.send(
 				'service_d79sxgg',
@@ -44,6 +45,7 @@ function Contact() {
 				setModalMessage(
 					'Message sent successfully! We will get back to you soon.'
 				);
+				setButtonLoading(false);
 				setShowModal(true);
 
 				setFormData({ name: '', email: '', subject: '', message: '' });
@@ -53,6 +55,7 @@ function Contact() {
 
 				setIsSuccess(false);
 				setModalMessage('Failed to send message. Please try again later.');
+				setButtonLoading(false);
 				setShowModal(true);
 			});
 	};
@@ -142,6 +145,7 @@ function Contact() {
 
 							<button
 								type="submit"
+								disabled={buttonLoading}
 								className="w-full bg-yellow-500 text-black py-3 rounded-md font-medium hover:bg-yellow-400 transition">
 								Send Message
 							</button>
