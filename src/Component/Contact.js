@@ -24,21 +24,20 @@ function Contact() {
 			[e.target.name]: e.target.value,
 		});
 	};
-
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		setButtonLoading(true);
 		emailjs
 			.send(
-				'service_d79sxgg',
-				'template_0brfwwj',
+				process.env.REACT_APP_EMAILJS_SERVICE_ID,
+				process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
 				{
 					name: formData.name,
 					email: formData.email,
 					subject: formData.subject,
 					message: formData.message,
 				},
-				'rdSU7gD0f6w2fLFt0'
+				process.env.REACT_APP_EMAILJS_PUBLIC_KEY
 			)
 			.then(() => {
 				setIsSuccess(true);
