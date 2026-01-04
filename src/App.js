@@ -1,9 +1,10 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import Home from './Component/Home.js';
 import Sidebar from './Component/Sidebar.js';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import Footer from './Component/Footer.js';
 
 function App() {
 	useEffect(() => {
@@ -14,10 +15,12 @@ function App() {
 			offset: 120,
 		});
 	}, []);
+
 	return (
 		<>
 			<Sidebar />
 			<Home />
+			<Footer />
 		</>
 	);
 }
