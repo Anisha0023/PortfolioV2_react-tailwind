@@ -25,29 +25,29 @@ export default function Projects() {
 				{projectData.map((project, index) => (
 					<div
 						key={index}
-						className={`bg-white rounded-3xl p-10 flex flex-col gap-8 items-center dark:bg-gray-800  
+						className={`bg-white rounded-3xl p-10 flex flex-col gap-8 items-center dark:bg-slate-800  
 							shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border-yellow-500
 							${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}
 						`}>
 						{/* LEFT/RIGHT CONTENT */}
-						<div className="md:w-1/2 flex flex-col justify-center bg-white dark:bg-gray-800 ">
-							<h2 className="text-4xl font-serif font-semibold mb-4 bg-white dark:text-white dark:bg-gray-800">
+						<div className="md:w-1/2 flex flex-col justify-center bg-white dark:bg-slate-800 ">
+							<h2 className="text-4xl font-serif font-semibold mb-4 bg-white dark:text-white dark:bg-slate-800">
 								{project.title}
 							</h2>
 
-							<p className="mb-6 leading-relaxed bg-white dark:text-white dark:bg-gray-800">
+							<p className="mb-6 leading-relaxed bg-white dark:text-white dark:bg-slate-800">
 								{project.desc}
 							</p>
 
 							<a
 								href={project.link}
-								className="border border-gray-700 dark:bg-yellow-500 dark:text-black max-w-50 bg-white px-6 py-2 rounded-full hover:bg-yellow-500 transition">
+								className="border border-gray-700 dark:bg-yellow-400 dark:text-black max-w-50 bg-white px-6 py-2 rounded-full hover:bg-yellow-500 transition">
 								View Project
 							</a>
 						</div>
 
 						{/* IMAGE */}
-						<div className="md:w-1/2 bg-white dark:bg-gray-800">
+						<div className="md:w-1/2 bg-white dark:bg-slate-800">
 							<img
 								src={project.image}
 								alt={project.title}

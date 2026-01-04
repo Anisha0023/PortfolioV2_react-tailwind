@@ -19,8 +19,8 @@ function Sidebar() {
 			{/* DeskTop View */}
 			<nav
 				className="hidden md:flex w-full items-center py-5 px-20 gap-10
-				bg-yellow-500/70
-				text-black dark:text-gray-100
+				  
+				text-black dark:text-slate-50
 				font-medium transition-colors sticky top-0 z-50 backdrop-filter backdrop-blur-[20px]">
 				<span className="font-bold text-xl"></span>
 
@@ -29,7 +29,7 @@ function Sidebar() {
 						<a
 							key={item.name}
 							href={item.link}
-							className="hover:text-black/70 dark:hover:text-yellow-400 transition">
+							className="hover:text-black/70 transition">
 							{item.name}
 						</a>
 					))}

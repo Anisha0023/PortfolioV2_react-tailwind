@@ -1,5 +1,4 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa6';
-import { RiTodoLine } from 'react-icons/ri';
 import About from './About';
 import Projects from './Projects';
 import Experience from './Experience';
@@ -15,6 +14,7 @@ import {
 	ChevronLeft,
 	ChevronRight,
 } from 'lucide-react';
+
 function Home() {
 	const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -64,39 +64,37 @@ function Home() {
 	}, []);
 	return (
 		<>
-			<div
-				data-aos="fade-bottom"
-				className="w-full flex flex-col lg:flex-row items-start justify-between px-8 mt-20 gap-10">
+			<div className="w-full flex flex-col lg:flex-row items-start justify-between px-8 mt-20 gap-10">
 				<div className="max-w-xl flex flex-col gap-5">
 					<h3 className="text-yellow-500 text-xl font-semibold tracking-wider">
 						FULL STACK DEVELOPER
 					</h3>
 
-					<h1 className="font-serif text-4xl font-bold leading-tight">
+					<h1 className="font-serif slate-50 text-4xl font-bold leading-tight">
 						Hello, I'm Anisha J K
 					</h1>
 
-					<p className="text-gray-600 dark:text-white font-inter text-lg leading-relaxed">
+					<p className="text-gray-600 dark:text-slate-300 font-inter text-lg leading-relaxed">
 						Specialized in building modern React frontends backed by robust .NET
 						APIs, delivering clean architecture and intuitive user experiences.
 					</p>
-					<p className="mt-6 text-sm text-gray-500 max-w-lg">
+					<p className="mt-6 text-gray-500 text-sm dark:text-slate-400 max-w-lg">
 						Currently working on scalable React and .NET applications in a
 						production environment.
 					</p>
 
 					<div className="flex flex-wrap gap-4 mt-5">
-						<a
+						{/* <a
 							className="btn-default flex items-center gap-2 justify-center"
 							target="blank">
 							Projects <RiTodoLine />
-						</a>
+						</a> */}
 
 						<a
 							href="https://www.linkedin.com/in/anisha-j-k-profile"
 							className="btn-default flex items-center gap-2 justify-center"
 							target="blank">
-							LinkedIn <FaLinkedin />
+							LinkedIn <FaLinkedin color="blue" />
 						</a>
 
 						<a
@@ -133,8 +131,8 @@ function Home() {
 								<div
 									key={index}
 									className="w-full flex-shrink-0 px-4">
-									<div className="bg-white dark:bg-gray-800 rounded-lg p-8 shadow-xl border-t-4 border-yellow-500 text-center max-w-xl mx-auto">
-										<div className="text-yellow-500 mb-6 flex justify-center">
+									<div className="bg-white dark:bg-slate-800 rounded-lg p-8 shadow-xl border-t-4 border-yellow-400 text-center max-w-xl mx-auto">
+										<div className="text-yellow-400 mb-6 flex justify-center">
 											{highlight.icon}
 										</div>
 										<h3 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">
@@ -152,12 +150,12 @@ function Home() {
 					{/* Navigation Buttons */}
 					<button
 						onClick={prevSlide}
-						className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-yellow-500 hover:bg-yellow-600 text-white p-3 rounded-full shadow-lg transition-all duration-300">
+						className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-yellow-400 hover:bg-yellow-500 text-slate-50 p-3 rounded-full shadow-lg transition-all duration-300">
 						<ChevronLeft className="w-6 h-6" />
 					</button>
 					<button
 						onClick={nextSlide}
-						className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-yellow-500 hover:bg-yellow-600 text-white p-3 rounded-full shadow-lg transition-all duration-300">
+						className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-yellow-400 hover:bg-yellow-500 text-slate-50 p-3 rounded-full shadow-lg transition-all duration-300">
 						<ChevronRight className="w-6 h-6" />
 					</button>
 					<div className="flex justify-center gap-2 mt-8">
