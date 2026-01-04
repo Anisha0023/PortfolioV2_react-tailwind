@@ -1,70 +1,129 @@
-# Getting Started with Create React App
+🌐 Anisha J K – Developer Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive developer portfolio showcasing my projects, skills, and experience. Built with React and Tailwind CSS, with a strong focus on performance, accessibility, and clean UI/UX across light and dark modes.
 
-## Available Scripts
+🔗 Live Demo
 
-In the project directory, you can run:
+👉 Demo : https://portfolio-v2-react-tailwind.vercel.app
 
-### `npm start`
+🧑‍💻 About Me
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+I am a Full Stack Developer specializing in React frontends and backend by .NET APIs, focused on building scalable, maintainable, and user-centric web applications. This portfolio highlights professional journey, technical expertise, and selected projects.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+✨ Features
 
-### `npm test`
+Responsive design (mobile, tablet, desktop)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Light & Dark mode support
 
-### `npm run build`
+Smooth animations using AOS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Accessible UI following WCAG contrast guidelines
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Optimized performance (lazy loading, clean renders)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Contact form with EmailJS integration
 
-### `npm run eject`
+Modular, scalable component architecture
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+🛠 Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Frontend
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+React (Create React App)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Tailwind CSS
 
-## Learn More
+AOS
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+React Icons / Lucide Icons
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Lottie Animations
 
-### Code Splitting
+Utilities
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+EmailJS (contact form)
 
-### Analyzing the Bundle Size
+ESLint
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+📁 Project Structure
+src/
+├── components/
+│ ├── Home.jsx
+│ ├── About.jsx
+│ ├── Projects.jsx
+│ ├── Experience.jsx
+│ ├── Contact.jsx
+│ └── ConfirmationModal.jsx
+├── assets/
+│ ├── images/
+│ ├── lottieAnimationImg/
+│ └── documents/
+├── context/
+│ └── ThemeContext.jsx
+├── App.js
+├── index.js
+└── index.css
 
-### Making a Progressive Web App
+⚙️ Installation & Setup
+1️⃣ Clone the repository
+git clone https://github.com/Anisha0023/PortfolioV2_react-tailwind.git
+cd portfolio
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2️⃣ Install dependencies
+npm install
 
-### Advanced Configuration
+3️⃣ Configure environment variables
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Create a .env file in the root directory:
 
-### Deployment
+REACT_APP_EMAILJS_SERVICE_ID=your_service_id
+REACT_APP_EMAILJS_TEMPLATE_ID=your_template_id
+REACT_APP_EMAILJS_PUBLIC_KEY=your_public_key
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+⚠️ Do not commit .env to GitHub.
 
-### `npm run build` fails to minify
+▶️ Run Locally
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+App runs on:
+http://localhost:3000
+
+🚀 Build for Production
+npm run build
+
+Optimized production build will be generated in the build/ folder.
+
+♿ Accessibility
+
+Proper color contrast for light & dark modes
+
+Keyboard navigable components
+
+Semantic HTML structure
+
+Focus-visible styles enabled
+
+Accessibility audited with WCAG contrast considerations.
+
+📈 Performance
+
+Minimal blocking scripts
+
+Optimized images & animations
+
+Clean React render cycles
+
+No unnecessary reflows or layout shifts
+
+📬 Contact
+
+If you'd like to collaborate or discuss opportunities:
+
+Email: anishaanishajk@gmail.com
+
+LinkedIn: https://www.linkedin.com/in/anisha-j-k-profile
+
+GitHub: https://github.com/Anisha0023
+
+⭐ If you like this portfolio, consider giving it a star!
