@@ -29,14 +29,14 @@ export default function Footer() {
 								</li>
 								<li>
 									<a
-										href="#projects"
+										href="#project"
 										className="dark:text-gray-400 text-[#64748B] hover:text-yellow-400 transition">
 										Projects
 									</a>
 								</li>
 								<li>
 									<a
-										href="#skills"
+										href="#experience"
 										className="dark:text-gray-400 text-[#64748B] hover:text-yellow-400 transition">
 										Skills & Experience
 									</a>
@@ -71,7 +71,7 @@ export default function Footer() {
 										/>
 									</svg>
 									<a
-										href="mailto:your.email@example.com"
+										href="mailto:anishaanishajk@gmail.com"
 										className="hover:text-yellow-400 transition">
 										anishaanishajk@gmail.com
 									</a>
@@ -90,7 +90,7 @@ export default function Footer() {
 										/>
 									</svg>
 									<a
-										href="tel:+15551234567"
+										href="tel:918870915938"
 										className="hover:text-yellow-400 transition">
 										+91 - 8870915938
 									</a>
