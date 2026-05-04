@@ -146,23 +146,35 @@ import matt from '../assets/images/Matt.png';
 import srishti from '../assets/images/srishti.png';
 import py from '../assets/images/py.png';
 import gtc from '../assets/images/gtc.png';
+import sentius from '../assets/images/sentiusLogo.png';
 import Skill from './Skill';
 
 const Experience = () => {
 	const [experiences] = useState([
 		{
 			id: 1,
-			company: 'GreenTop Information Technology',
-			logo: gtc,
-			position: 'Full Stack Developer',
-			duration: 'Feb 2025 - Present (10 m)',
-			location: 'Nithiravilai, Kk Dist, India',
+			company: 'Sentius Technologies Pvt Ltd',
+			logo: sentius,
+			position: 'UI Developer',
+			duration: 'Feb 2026 - Present',
+			location: 'Bangalore, India',
 			type: 'Full-Time',
 			verified: true,
 			featured: true,
 		},
 		{
 			id: 2,
+			company: 'GreenTop Information Technology',
+			logo: gtc,
+			position: 'Full Stack Developer',
+			duration: 'Feb 2025 - Feb 2026 (1 yr 1 month)',
+			location: 'Nithiravilai, Kk Dist, India',
+			type: 'Full-Time',
+			verified: true,
+			featured: true,
+		},
+		{
+			id: 3,
 			company: 'PySPiders',
 			logo: py,
 			position: 'Full Stack Developer Learner',
@@ -173,7 +185,7 @@ const Experience = () => {
 			featured: false,
 		},
 		{
-			id: 3,
+			id: 4,
 			company: 'Srishti Innovative',
 			logo: srishti,
 			position: 'Python Learner',
@@ -184,7 +196,7 @@ const Experience = () => {
 			featured: false,
 		},
 		{
-			id: 4,
+			id: 5,
 			company: 'MATT Engineering Solutions',
 			logo: matt,
 			position: 'Learner',
